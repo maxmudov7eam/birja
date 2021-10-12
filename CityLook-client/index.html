@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>CityLook</title>
+</head>
+<body id="body">
+
+
+    <div class="header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-1">
+                    <h5 class="mr-3 cursor "><span><img src="assets/image/logo.svg" alt=""></span></h5>
+                </div>
+                <div class="col-4 d-flex align-items-center">
+                    <a href="#" class="a d-flex align-items-center g-regular"><span class="mr-1"><img src="assets/icon/cursor.svg" alt="Cursor"></span>Таллин</a>
+                    
+                    <div class="input-group ">
+                        <input type="text" class="form-control border-0 shadow-none g-regular" placeholder="Поиск">
+                        <div class="input-group-append">
+                            <button type="button" class="btn bg-white shadow-none" >
+                                <span><img src="assets/icon/search.svg" alt=""></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-5">
+                    <ul class="d-flex align-items-center">
+                        <li><a class="g-regular" href="#">Найти мастера</a></li>
+                        <li><a class="g-regular" href="#">Мастерам</a></li>
+                        <li><a class="g-regular" href="#">О сервисе </a></li>
+                        <li><a class="g-regular" href="#">Помощь</a></li>
+                        <li><a class="g-regular" href="#">Курсы мастеров</a></li>
+                        <li><a class="g-regular" href="#">Статьи</a></li>
+                    </ul>
+                </div>
+                <div class="col-2 d-flex align-items-center justify-content-end">
+                    <button class="cursor btn myBtn language d-regular" type='button'>РУ</button>
+                    <button class="cursor btn myBtn enter d-regular" type='button'>Войти</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-wrap" >
+
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h5 class="m-extra cursor"> Главная / Найти мастера </h5>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12">
+                        <h1 class="g-bold">Найти мастера</h1>
+                    </div>
+                </div>
+                <div class="row mb-5" >
+                    <div class="col-4 d-flex align-items-center justify-content-between ">
+                        <b class="m-regular ">Выбрать дату</b>
+                        <div class='position-relative miniKalendar'>
+                            
+                            <div class="position-absolute kalendarCard">
+                                <h5 class="m-regular position-relative">Выберите один или несколько дней
+                                    <span class="position-absolute cursor cancel" onClick='removeCard()'><img src="assets/icon/cancel.svg" alt=""></span>
+                                </h5>
+                                <a class="m-regular cursor">2021 Апрель <span class="ml-4"><img src="assets/icon/down.svg" alt="down"></span></a>
+    
+                                <div class="weeks d-flex">                                                                       
+                                    <div class="week"><h6 class="m-regular">ПН</h6></div>
+                                    <div class="week"><h6 class="m-regular">ВТ</h6></div>
+                                    <div class="week"><h6 class="m-regular">СР</h6></div>
+                                    <div class="week"><h6 class="m-regular">ЧТ</h6></div>
+                                    <div class="week"><h6 class="m-regular">ПТ</h6></div>
+                                    <div class="week"><h6 class="m-regular">СБ</h6></div>
+                                    <div class="week"><h6 class="m-regular">ВС</h6></div>
+                                </div>
+    
+                                <div class="days d-flex align-items-center flex-wrap">
+                                    <div class="day actived" onclick="chooseDay(29)"><h6 class="m-regular " >29</h6></div>
+                                    <div class="day actived" onclick="chooseDay(30)"><h6 class="m-regular " >30</h6></div>
+                                    <div class="day actived" onclick="chooseDay(31)"><h6 class="m-regular " >31</h6></div>
+                                    <div class="day" onclick="chooseDay(01)"><h6 class="m-regular" >1</h6></div>
+                                    <div class="day" onclick="chooseDay(02)"><h6 class="m-regular" >2</h6></div>
+                                    <div class="day" onclick="chooseDay(03)"><h6 class="m-regular" >3</h6></div>
+                                    <div class="day" onclick="chooseDay(04)"><h6 class="m-regular" >4</h6></div>
+                                    <div class="day" onclick="chooseDay(05)"><h6 class="m-regular" >5</h6></div>
+                                    <div class="day" onclick="chooseDay(06)"><h6 class="m-regular" >6</h6></div>
+                                    <div class="day" onclick="chooseDay(07)"><h6 class="m-regular" >7</h6></div>
+                                    <div class="day" onclick="chooseDay(08)"><h6 class="m-regular" >8</h6></div>
+                                    <div class="day" onclick="chooseDay(09)"><h6 class="m-regular" >9</h6></div>
+                                    <div class="day" onclick="chooseDay(10)"><h6 class="m-regular" >10</h6></div>
+                                    <div class="day" onclick="chooseDay(11)"><h6 class="m-regular" >11</h6></div>
+                                    <div class="day" onclick="chooseDay(12)"><h6 class="m-regular" >12</h6></div>
+                                    <div class="day" onclick="chooseDay(13)"><h6 class="m-regular" >13</h6></div>
+                                    <div class="day" onclick="chooseDay(14)"><h6 class="m-regular" >14</h6></div>
+                                    <div class="day" onclick="chooseDay(15)"><h6 class="m-regular" >15</h6></div>
+                                    <div class="day" onclick="chooseDay(16)"><h6 class="m-regular" >16</h6></div>
+                                    <div class="day" onclick="chooseDay(17)"><h6 class="m-regular" >17</h6></div>
+                                    <div class="day" onclick="chooseDay(18)"><h6 class="m-regular" >18</h6></div>
+                                    <div class="day" onclick="chooseDay(19)"><h6 class="m-regular" >19</h6></div>
+                                    <div class="day" onclick="chooseDay(20)"><h6 class="m-regular" >20</h6></div>
+                                    <div class="day" onclick="chooseDay(21)"><h6 class="m-regular" >21</h6></div>
+                                    <div class="day" onclick="chooseDay(22)"><h6 class="m-regular" >22</h6></div>
+                                    <div class="day" onclick="chooseDay(23)"><h6 class="m-regular" >23</h6></div>
+                                    <div class="day" onclick="chooseDay(24)"><h6 class="m-regular" >24</h6></div>
+                                    <div class="day" onclick="chooseDay(25)"><h6 class="m-regular" >25</h6></div>
+                                    <div class="day" onclick="chooseDay(26)"><h6 class="m-regular" >26</h6></div>
+                                    <div class="day" onclick="chooseDay(27)"><h6 class="m-regular" >27</h6></div>
+                                    <div class="day" onclick="chooseDay(28)"><h6 class="m-regular" >28</h6></div>
+                                    <div class="day" onclick="chooseDay(29)"><h6 class="m-regular" >29</h6></div>
+                                    <div class="day" onclick="chooseDay(30)"><h6 class="m-regular" >30</h6></div>
+                                </div>
+                            </div>
+                            <button class="btn kalendarBtn d-flex align-items-center justify-content-between  m-regular" onClick='showCard()' > <span class="mr-2"><img src="assets/icon/calendar.svg" alt="Kalendar"></span> <span id="result">Календарь</span>  <span class="ml-3"><img src="assets/icon/down.svg" alt=""></span> </button>
+                        </div>
+                    </div>
+                    <div onclick="removeCard()" class="col-4 d-flex align-items-center justify-content-between">
+                        <b class="m-regular">Время</b>
+                        <input class="form-control time" type="time" name="" id="">
+                        <span>-</span>
+                        <input class="form-control time" type="time" name="" id="">
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-12 d-flex align-items-center">
+                        <h3 class="g-regular mr-3">Вы выбрали  </h3>
+                        <button class="btn btn1">Ламинирование бровей + Укладка бровей</button>
+                    </div>
+                </div>
+                <div class="row mt-5" onClick='removeCard()'> 
+                    <div class="col-3">
+                        <h4 class="g-regular">Выберите услугу</h4>
+                    </div>
+                    <div class="col-5 ml-auto d-flex align-items-center justify-content-end">
+                        <button class="btn myBtn search d-flex align-items-center"> <span><img src="assets/icon/big-search.svg" alt="Search"></span>Начать поиск</button>
+                        <button class="btn myBtn d-flex align-items-center plus ml-3"> <span><img src="assets/icon/plus.svg" alt="Search"></span>Добавить еще услугу</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="content" onClick='removeCard()'>
+            <div class="container">
+                <div class="row">
+                    <div class="col-3">
+    
+                        <ul class="nav justify-content-end  nav-pills  flex-column first">
+                            <li class="nav-item mb-2 "><a href="#mytab1" data-toggle="tab" class="d-flex align-items-center justify-content-between nav-link g-regular  ">Брови <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                            <li class="nav-item mb-2 "><a href="#mytab2" data-toggle="tab" class="d-flex align-items-center justify-content-between nav-link g-regular  ">Ресницы <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                            <li class="nav-item mb-2 "><a href="#mytab3" data-toggle="tab" class="d-flex align-items-center justify-content-between nav-link g-regular  ">Ногти <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                            <li class="nav-item mb-2 "><a href="#mytab4" data-toggle="tab" class="d-flex align-items-center justify-content-between nav-link g-regular  ">Волосы <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                            <li class="nav-item mb-2 "><a href="#mytab5" data-toggle="tab" class="d-flex align-items-center justify-content-between nav-link g-regular  ">Лицо <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                            <li class="nav-item mb-2 "><a href="#mytab6" data-toggle="tab" class="d-flex align-items-center justify-content-between nav-link g-regular  ">Татуаж <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                            <li class="nav-item mb-2 "><a href="#mytab7" data-toggle="tab" class="d-flex align-items-center justify-content-between nav-link g-regular  ">Депиляция <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                            <li class="nav-item mb-2 "><a href="#mytab8" data-toggle="tab" class="d-flex align-items-center justify-content-between nav-link g-regular  ">Массаж <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                            <li class="nav-item mb-2 "><a href="#mytab9" data-toggle="tab" class="d-flex align-items-center justify-content-between nav-link g-regular  ">Пирсинг <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                            <li class="nav-item mb-2 "><a href="#mytab10" data-toggle="tab" class="d-flex align-items-center justify-content-between nav-link g-regular  ">Тату <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                            <li class="nav-item mb-2 "><a href="#mytab11" data-toggle="tab" class="d-flex align-items-center justify-content-between nav-link g-regular  ">Визаж <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                            <li class="nav-item mb-2 "><a href="#mytab12" data-toggle="tab" class="d-flex align-items-center justify-content-between nav-link g-regular  ">Стоматология <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                        </ul>
+    
+                    </div>
+    
+                    <div class="col-3">
+    
+                        <div class="tab-content">
+                            
+                            <div class="tab-pane fade flex-column second" id='mytab1'>
+                                <ul class="nav   nav-pills  ">
+                                    <li class="nav-item"><a href="#mytab1-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Окрашивание ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab2-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Восстановление ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab3-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Наращивание ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab4-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Коррекция ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab5-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Завивка ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab6-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Декор ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                </ul>
+                            </div>
+    
+                            <div class="tab-pane fade flex-column second" id='mytab2'>
+                                <ul class="nav   nav-pills  ">
+                                    <li class="nav-item"><a href="#mytab1-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Окрашивание ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab2-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Восстановление ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab3-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Наращивание ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab4-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Коррекция ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab5-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Завивка ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab6-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Декор ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                </ul>
+                            </div>
+    
+                            <div class="tab-pane fade flex-column second" id='mytab3'>
+                                <ul class="nav   nav-pills  ">
+                                    <li class="nav-item"><a href="#mytab1-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Окрашивание ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab2-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Восстановление ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab3-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Наращивание ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab4-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Коррекция ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab5-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Завивка ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab6-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Декор ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                </ul>
+                            </div>
+    
+                            <div class="tab-pane fade flex-column second" id='mytab4'>
+                                <ul class="nav   nav-pills  ">
+                                    <li class="nav-item"><a href="#mytab1-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Окрашивание ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab2-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Восстановление ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab3-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Наращивание ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab4-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Коррекция ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab5-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Завивка ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab6-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Декор ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="tab-pane fade flex-column second" id='mytab5'>
+                                <ul class="nav   nav-pills  ">
+                                    <li class="nav-item"><a href="#mytab1-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Окрашивание ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab2-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Восстановление ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab3-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Наращивание ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab4-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Коррекция ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab5-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Завивка ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab6-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Декор ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="tab-pane fade flex-column second" id='mytab6'>
+                                <ul class="nav   nav-pills  ">
+                                    <li class="nav-item"><a href="#mytab1-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Окрашивание ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab2-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Восстановление ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab3-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Наращивание ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab4-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Коррекция ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab5-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Завивка ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab6-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Декор ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="tab-pane fade flex-column second" id='mytab7'>
+                                <ul class="nav   nav-pills  ">
+                                    <li class="nav-item"><a href="#mytab1-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Окрашивание ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab2-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Восстановление ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab3-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Наращивание ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab4-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Коррекция ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab5-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Завивка ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab6-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Декор ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="tab-pane fade flex-column second" id='mytab8'>
+                                <ul class="nav   nav-pills  ">
+                                    <li class="nav-item"><a href="#mytab1-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Окрашивание ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab2-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Восстановление ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab3-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Наращивание ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab4-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Коррекция ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab5-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Завивка ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab6-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Декор ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="tab-pane fade flex-column second" id='mytab9'>
+                                <ul class="nav   nav-pills  ">
+                                    <li class="nav-item"><a href="#mytab1-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Окрашивание ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab2-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Восстановление ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab3-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Наращивание ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab4-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Коррекция ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab5-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Завивка ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab6-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Декор ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="tab-pane fade flex-column second" id='mytab10'>
+                                <ul class="nav   nav-pills  ">
+                                    <li class="nav-item"><a href="#mytab1-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Окрашивание ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab2-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Восстановление ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab3-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Наращивание ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab4-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Коррекция ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab5-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Завивка ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab6-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Декор ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="tab-pane fade flex-column second" id='mytab11'>
+                                <ul class="nav   nav-pills  ">
+                                    <li class="nav-item"><a href="#mytab1-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Окрашивание ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab2-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Восстановление ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab3-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Наращивание ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab4-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Коррекция ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab5-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Завивка ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab6-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Декор ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="tab-pane fade flex-column second" id='mytab12'>
+                                <ul class="nav   nav-pills  ">
+                                    <li class="nav-item"><a href="#mytab1-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Окрашивание ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab2-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Восстановление ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab3-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Наращивание ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab4-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Коррекция ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab5-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Завивка ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                    <li class="nav-item"><a href="#mytab6-2" data-toggle="tab" class="nav-link d-flex align-items-center justify-content-between  ">Декор ресниц <span class="span"><img src="assets/icon/right.svg" alt=""></span> <span class='d-none span2'><img src="assets/icon/right-white.svg" alt=""></span></a></li>
+                                </ul>
+                            </div>
+    
+                        </div>
+    
+                    </div>
+    
+                    <div class="col-6">
+                        <div class="tab-content">
+                                  
+                            <div class="tab-pane fade flex-column" id='mytab1-2'>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="myCard h-100">
+                                            <h5 class="g-regular">Ботокс ресниц</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="myCard h-100">
+                                            <h5 class="g-regular">Вельвет ресниц </h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="myCard h-100">
+                                            <h5 class="g-regular">Ламинирование
+                                                ресниц</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="myCard h-100">
+                                            <h5 class="g-regular">Коллагинирование
+                                                ресниц</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>        
+                            <div class="tab-pane fade flex-column" id='mytab2-2'>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="myCard h-100">
+                                            <h5 class="g-regular">Ботокс ресниц</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="myCard h-100">
+                                            <h5 class="g-regular">Вельвет ресниц </h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="myCard h-100">
+                                            <h5 class="g-regular">Ламинирование
+                                                ресниц</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="myCard h-100">
+                                            <h5 class="g-regular">Коллагинирование
+                                                ресниц</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>        
+                            <div class="tab-pane fade flex-column" id='mytab3-2'>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="myCard h-100">
+                                            <h5 class="g-regular">Ботокс ресниц</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="myCard h-100">
+                                            <h5 class="g-regular">Вельвет ресниц </h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="myCard h-100">
+                                            <h5 class="g-regular">Ламинирование
+                                                ресниц</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="myCard h-100">
+                                            <h5 class="g-regular">Коллагинирование
+                                                ресниц</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>      
+                            <div class="tab-pane fade flex-column" id='mytab4-2'>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="myCard h-100">
+                                            <h5 class="g-regular">Ботокс ресниц</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="myCard h-100">
+                                            <h5 class="g-regular">Вельвет ресниц </h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="myCard h-100">
+                                            <h5 class="g-regular">Ламинирование
+                                                ресниц</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="myCard h-100">
+                                            <h5 class="g-regular">Коллагинирование
+                                                ресниц</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>      
+                            <div class="tab-pane fade flex-column" id='mytab5-2'>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="myCard h-100">
+                                            <h5 class="g-regular">Ботокс ресниц</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="myCard h-100">
+                                            <h5 class="g-regular">Вельвет ресниц </h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="myCard h-100">
+                                            <h5 class="g-regular">Ламинирование
+                                                ресниц</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="myCard h-100">
+                                            <h5 class="g-regular">Коллагинирование
+                                                ресниц</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>      
+                            <div class="tab-pane fade flex-column" id='mytab6-2'>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="myCard h-100">
+                                            <h5 class="g-regular">Ботокс ресниц</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="myCard h-100">
+                                            <h5 class="g-regular">Вельвет ресниц </h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="myCard h-100">
+                                            <h5 class="g-regular">Ламинирование
+                                                ресниц</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="myCard h-100">
+                                            <h5 class="g-regular">Коллагинирование
+                                                ресниц</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popular">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="g-regular">Популярные комплексы с этой услугой </h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4 ">
+                    <div class="myCard position-relative d-flex align-items-center">
+                        <div class="sloy position-absolute"></div>
+                        <div class="zed">
+                            <p class="g-regular">Ламинирование бровей</p>
+                            <p class="g-regular">+ коррекция</p>
+                        </div>
+                        <button class="btn myBtn"><img src="assets/icon/big-right.svg" alt="Right button"></button>
+                    </div>
+                </div>
+                <div class="col-4 ">
+                    <div class="myCard card2 position-relative d-flex align-items-center">
+                        <div class="sloy position-absolute"></div>
+                        <div class="zed">
+                            <p class="g-regular">Ламинирование бровей</p>
+                            <p class="g-regular">+ коррекция</p>
+                            <p class="g-regular">+ окрашивание</p>
+                        </div>
+                        <button class="btn myBtn"><img src="assets/icon/big-right.svg" alt="Right button"></button>
+                    </div>
+                </div>
+                <div class="col-4 ">
+                    <div class="myCard card3 position-relative d-flex align-items-center">
+                        <div class="sloy position-absolute"></div>
+                        <div class="zed">
+                            <p class="g-regular">Ламинирование бровей</p>
+                            <p class="g-regular">+ коррекция</p>
+                        </div>
+                        <button class="btn myBtn"><img src="assets/icon/big-right.svg" alt="Right button"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+
+    <div class="footer-line"></div>
+    <div class="pre-footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-2">
+                    <span><img src="assets/image/logo.svg" alt="logo"></span>
+                </div>
+                <div class="col-7"> 
+                    <ul class="d-flex align-items-center justify-content-between">
+                        <li><a href="#" class="g-regular" >Найти мастера </a></li>
+                        <li><a href="#" class="g-regular" >Регистрация мастера</a></li>
+                        <li><a href="#" class="g-regular" >Безопасность</a></li>
+                        <li><a href="#" class="g-regular" >Соглашение</a></li>
+                        <li><a href="#" class="g-regular" >Политика</a></li>
+                    </ul>
+                </div>
+                <div class="col-3 d-flex align-items-center justify-content-end">
+                    <span class="myBtn span"><img src="assets/icon/vk.svg" alt="Social media"></span>
+                    <span class="myBtn span"><img src="assets/icon/insta.svg" alt="Social media"></span>
+                    <span class="myBtn span"><img src="assets/icon/tg.svg" alt="Social media"></span>
+                    <span class="myBtn span"><img src="assets/icon/fb.svg" alt="Social media"></span>
+                    <span class="myBtn span"><img src="assets/icon/google.svg" alt="Social media"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-2">
+                    <h5 class="g-regular">© CityLook, 2019–2020</h5>
+                </div>
+                <div class="col-5">
+                    <p class="g-regular">Информация, опубликованная на данном сайте, предназначена для любой аудитории,
+                        если иное не указано дополнительно в отношении отдельных материалов.
+                    </p>
+                </div>
+                <div class="col-4 ml-auto">
+                    <h5 class="g-regular ml-auto text-right">При копировании любого материала ссылка на сайт обязательна</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+                                                   
+
+
+        
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+                
+        const card = document.querySelector('.kalendarCard');
+        const body = document.querySelector('#body')
+
+        const showCard = () => {
+            card.classList.add('show')
+        }
+
+        const removeCard = () => {
+            card.classList.remove('show')
+        }
+
+    </script>
+</body>
+</html>
